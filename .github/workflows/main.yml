@@ -25,5 +25,11 @@ jobs:
           aws-region: us-east-2
 
       - run: terraform init
-      - run: terraform plan
-      - run: terraform apply -auto-approve
+      - name: Terraform Plan
+        if: github.event_name == 'pull_request'
+        run: terraform plan
+        
+      - name: Terraform Apply
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: terraform apply -auto-approve
+      
