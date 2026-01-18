@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "my_bucket" {
-  bucket = "my-mk-18-Jan-2026-bukcet-test"
+  bucket = "my-mk-18-Jan-2026-bukcet-test-1"
 
   tags = {
     Name        = "MyBucket"
@@ -7,7 +7,7 @@ resource "aws_s3_bucket" "my_bucket" {
   }
 }
 resource "aws_s3_bucket" "my_bucket_1" {
-  bucket = "my-terraform-state-bucket-mk"
+  bucket = "my-terraform-state-bucket-mk-1"
 
   tags = {
     Name        = "MyBucket-1"
