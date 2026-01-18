@@ -6,3 +6,15 @@ resource "aws_s3_bucket" "my_bucket" {
     Environment = "Dev"
   }
 }
+resource "aws_s3_bucket" "my_bucket_1" {
+  bucket = "my-terraform-state-bucket-mk"
+
+  tags = {
+    Name        = "MyBucket-1"
+    Environment = "Dev"
+  }
+}
+
+
+
+
